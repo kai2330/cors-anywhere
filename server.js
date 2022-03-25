@@ -22,7 +22,7 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
-  originWhitelist: originWhitelist,
+  originWhitelist: ['http://dofusports.xyz','http://roystream.com','http://volokit2.com','http://nodelaytv.pw','https://dofusports.xyz','https://roystream.com','https://volokit2.com','https://nodelaytv.pw'], // Allow all origins
   requireHeader: ['origin', 'x-requested-with'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
